@@ -6,11 +6,13 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Menu, X, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ContactModal } from './ContactModal';
 
 export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavigating, setIsNavigating] = useState(false);
+  const [contactModalOpen, setContactModalOpen] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -176,7 +178,14 @@ export function Navigation() {
                       transition={{ delay: index * 0.05 }}
                     >
                       <button
-                        onClick={() => handleNavigation(item.href)}
+                        onClick={() => {
+                          if (item.label === 'Контакты') {
+                            setContactModalOpen(true);
+                            setMenuOpen(false);
+                          } else {
+                            handleNavigation(item.href);
+                          }
+                        }}
                         className="text-2xl uppercase tracking-wider hover:opacity-70 transition-opacity block w-full text-left"
                       >
                         {item.label}
@@ -199,6 +208,9 @@ export function Navigation() {
           </>
         )}
       </AnimatePresence>
+
+      {/* Contact Modal */}
+      <ContactModal isOpen={contactModalOpen} onClose={() => setContactModalOpen(false)} />
     </>
   );
 }
