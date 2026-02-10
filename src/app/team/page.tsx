@@ -121,104 +121,172 @@ export default function TeamPage() {
     <main className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
-        <div className="max-w-6xl mx-auto text-center">
+      {/* Hero Section - УЛУЧШЕННЫЙ */}
+      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Наша команда</h1>
-            <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+            <div className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+              <span className="text-sm font-semibold">👥 Команда экспертов</span>
+            </div>
+
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-indigo-100 to-purple-100 bg-clip-text text-transparent">
+              Наша команда
+            </h1>
+
+            <p className="text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto leading-relaxed">
               Профессионалы с многолетним опытом, которые помогут вам найти и купить идеальный автомобиль из Европы
             </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 mt-12 max-w-2xl mx-auto">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">10</div>
+                <div className="text-sm text-indigo-200">Экспертов</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">7+</div>
+                <div className="text-sm text-indigo-200">Лет опыта</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">600+</div>
+                <div className="text-sm text-indigo-200">Довольных клиентов</div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Departments Section */}
-      <section className="py-16 px-6 bg-gray-50">
+      {/* Departments Section - УЛУЧШЕННЫЙ */}
+      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+              Наши отделы
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Каждый отдел специализируется на своей области, обеспечивая высочайшее качество сервиса
+            </p>
+          </motion.div>
+
           <div className="grid md:grid-cols-4 gap-6">
             {departments.map((dept, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all"
+                className="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-indigo-200 relative overflow-hidden"
               >
-                <dept.icon className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="font-bold text-lg mb-2">{dept.title}</h3>
-                <div className="text-sm text-indigo-600 font-semibold mb-2">{dept.count}</div>
-                <p className="text-sm text-gray-600">{dept.description}</p>
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/0 to-purple-50/0 group-hover:from-indigo-50 group-hover:to-purple-50 transition-all duration-500"></div>
+
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                    <dept.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-3 text-gray-900">{dept.title}</h3>
+                  <div className="text-sm text-indigo-600 font-semibold mb-3 bg-indigo-50 inline-block px-4 py-1 rounded-full">{dept.count}</div>
+                  <p className="text-sm text-gray-600 leading-relaxed">{dept.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Team Members Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
+      {/* Team Members Section - УЛУЧШЕННЫЙ */}
+      <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl font-bold mb-4">Ключевые специалисты</h2>
-            <p className="text-lg text-gray-600">
-              Познакомьтесь с людьми, которые делают возможным вашу покупку
+            <div className="inline-block px-6 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-full border border-indigo-100 mb-6">
+              <span className="text-sm font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                ⭐ Ключевые специалисты
+              </span>
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 bg-clip-text text-transparent">
+              Познакомьтесь с нашей командой
+            </h2>
+
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Эксперты с многолетним опытом, которые воплотят вашу мечту об идеальном автомобиле в реальность
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-start">
             {team.map((member, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-indigo-200 hover:shadow-xl transition-all group flex flex-col h-full"
+                transition={{ duration: 0.7, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-3xl p-6 hover:shadow-2xl hover:border-indigo-300 transition-all duration-500 group flex flex-col h-full overflow-hidden relative"
               >
-                {/* Avatar */}
-                <div className="w-24 h-24 rounded-2xl overflow-hidden mb-6 mx-auto group-hover:scale-110 transition-transform shadow-lg">
+                {/* Decorative gradient background */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-100/50 to-purple-100/50 rounded-full blur-3xl -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+
+                {/* Avatar - УВЕЛИЧЕН */}
+                <div className="relative w-40 h-40 rounded-3xl overflow-hidden mb-6 mx-auto group-hover:scale-105 transition-all duration-500 shadow-2xl ring-4 ring-white group-hover:ring-indigo-200 z-10">
                   <Image
                     src={member.image}
                     alt={`${member.firstName} ${member.lastName}`}
-                    width={96}
-                    height={96}
+                    width={160}
+                    height={160}
                     className="object-cover w-full h-full"
                   />
+                  {/* Overlay gradient on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
 
                 {/* Info */}
-                <div className="text-center mb-6 flex-grow">
-                  <h3 className="text-xl font-bold mb-2 leading-tight">
-                    <div>{member.firstName}</div>
-                    <div>{member.lastName}</div>
+                <div className="text-center mb-6 flex-grow relative z-10">
+                  <h3 className="text-2xl font-bold mb-3 leading-tight bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
+                    {member.firstName} {member.lastName}
                   </h3>
-                  <p className="text-indigo-600 font-semibold mb-4">{member.position}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  <div className="inline-block px-4 py-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-semibold rounded-full mb-4 shadow-md">
+                    {member.position}
+                  </div>
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {member.description}
                   </p>
                 </div>
 
-                {/* Telegram Contact */}
-                <div className="pt-6 border-t border-gray-100 mt-auto">
+                {/* Telegram Contact - УЛУЧШЕННАЯ КНОПКА */}
+                <div className="pt-6 border-t border-gray-200 mt-auto relative z-10">
                   <a
                     href={member.telegram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 w-full bg-[#0088cc] hover:bg-[#0077b5] text-white py-3 px-4 rounded-xl font-medium transition-all shadow-md hover:shadow-lg group"
+                    className="flex items-center justify-center gap-3 w-full bg-gradient-to-r from-[#0088cc] to-[#0099dd] hover:from-[#0077b5] hover:to-[#0088cc] text-white py-4 px-6 rounded-2xl font-semibold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 group relative overflow-hidden"
                   >
-                    <Send className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-                    <span>Связаться</span>
+                    {/* Animated background on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
+
+                    <Send className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300 relative z-10" />
+                    <span className="relative z-10 text-lg">Связаться в Telegram</span>
                   </a>
                 </div>
               </motion.div>
