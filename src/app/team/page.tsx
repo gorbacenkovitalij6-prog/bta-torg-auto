@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
-import { Award, Users, Target, Briefcase, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 
 export default function TeamPage() {
   const team = [
@@ -90,32 +90,6 @@ export default function TeamPage() {
     },
   ];
 
-  const departments = [
-    {
-      icon: Users,
-      title: 'Отдел продаж',
-      count: '10 специалистов',
-      description: 'Консультируют клиентов и помогают с выбором автомобиля',
-    },
-    {
-      icon: Target,
-      title: 'Отдел закупок',
-      count: '6 экспертов',
-      description: 'Ищут и проверяют автомобили на европейских площадках',
-    },
-    {
-      icon: Briefcase,
-      title: 'Юридический отдел',
-      count: '4 юриста',
-      description: 'Оформляют документы и сопровождают сделки',
-    },
-    {
-      icon: Award,
-      title: 'Служба качества',
-      count: '5 сотрудников',
-      description: 'Контролируют качество на всех этапах',
-    },
-  ];
 
   return (
     <main className="min-h-screen bg-white">
@@ -166,49 +140,6 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Departments Section - УЛУЧШЕННЫЙ */}
-      <section className="py-20 px-6 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">
-              Наши отделы
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Каждый отдел специализируется на своей области, обеспечивая высочайшее качество сервиса
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {departments.map((dept, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-indigo-200 relative overflow-hidden"
-              >
-                {/* Animated background gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-50/0 to-purple-50/0 group-hover:from-indigo-50 group-hover:to-purple-50 transition-all duration-500"></div>
-
-                <div className="relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <dept.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="font-bold text-lg mb-3 text-gray-900">{dept.title}</h3>
-                  <div className="text-sm text-indigo-600 font-semibold mb-3 bg-indigo-50 inline-block px-4 py-1 rounded-full">{dept.count}</div>
-                  <p className="text-sm text-gray-600 leading-relaxed">{dept.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Team Members Section - УЛУЧШЕННЫЙ */}
       <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50">
