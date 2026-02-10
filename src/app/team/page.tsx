@@ -14,7 +14,7 @@ export default function TeamPage() {
       position: 'Старший менеджер',
       description: '7 лет в сфере автоподбора, более 150 автомобилей, подобранных и доставленных клиентам под ключ. Руководит отделом продаж и координирует работу команды.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager1.png',
+      image: 'https://i.ibb.co/jvHzns7B/image-2026-02-09-10-37-04.png',
     },
     {
       firstName: 'Артём',
@@ -22,7 +22,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: '5 лет помогаю клиентам безопасно купить авто. Более 83 машин, доставленных и оформленных "под ключ", каждый проект — под личным контролем.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager2.png',
+      image: 'https://i.ibb.co/xqkh8Lpb/image-2026-02-09-10-37-30.png',
     },
     {
       firstName: 'Александр',
@@ -30,7 +30,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: 'Организует подбор, доставку и таможенное оформление. 4 года опыта в международных перевозках, более 60 успешных сделок.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager3.png',
+      image: 'https://i.ibb.co/F4t2VdQP/image-2026-02-09-10-38-00.png',
     },
     {
       firstName: 'Иван',
@@ -38,7 +38,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: '4 года занимаюсь автопригоном под ключ: от поиска и торгов до растаможки и постановки на учёт. Более 70 довольных клиентов.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager4.png',
+      image: 'https://i.ibb.co/8LD7jLQZ/image-2026-02-09-10-38-43.png',
     },
     {
       firstName: 'Андрей',
@@ -46,7 +46,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: '6 лет опыта в автобизнесе. Специализируюсь на премиум-сегменте: Mercedes, BMW, Audi. Организовал доставку более 90 автомобилей из Европы.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager5.png',
+      image: 'https://i.ibb.co/nNDJGG2R/image-2026-02-09-10-39-30.png',
     },
     {
       firstName: 'Алексей',
@@ -54,7 +54,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: '3 года строю для клиентов комфортный путь к своему автомобилю. Более 50 машин под ключ, каждый этап — под моим контролем от А до Я.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager6.png',
+      image: 'https://i.ibb.co/GvVr9fGn/image-2026-02-09-10-39-54.png',
     },
     {
       firstName: 'Сергей',
@@ -62,7 +62,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: '5 лет в автоподборе. Эксперт по внедорожникам и кроссоверам. Помог приобрести более 80 автомобилей с европейских аукционов и дилеров.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager7.png',
+      image: 'https://i.ibb.co/zzRMKDq/image-2026-02-09-10-40-43.png',
     },
     {
       firstName: 'Михаил',
@@ -70,7 +70,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: '4 года в сфере международных автоперевозок. Специализация — юридическое сопровождение и таможенное оформление. Более 65 успешных проектов.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager8.png',
+      image: 'https://i.ibb.co/Gm3Jb7x/image-2026-02-09-10-41-01.png',
     },
     {
       firstName: 'Михаил',
@@ -78,7 +78,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: '3 года опыта работы с немецкими и французскими автобиржами. Организую полный цикл: от выбора до регистрации в ГИБДД. 55+ довольных клиентов.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager9.png',
+      image: 'https://i.ibb.co/kVTJQDjZ/image-2026-02-09-10-41-28.png',
     },
     {
       firstName: 'Роман',
@@ -86,7 +86,7 @@ export default function TeamPage() {
       position: 'Менеджер',
       description: '5 лет в автоподборе. Работаю с проверенными партнёрами по всей Европе. Более 75 автомобилей доставлено и оформлено без скрытых проблем и рисков.',
       telegram: 'https://t.me/btatorg',
-      image: '/images/team/manager10.png',
+      image: 'https://i.ibb.co/8LC3N8fQ/image-2026-02-09-10-42-14.png',
     },
   ];
 
